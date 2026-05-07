@@ -1,0 +1,140 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:#FFF0F5;color:#3D1A2E;}
+  nav{background:#fff;border-bottom:1.5px solid #F4A8C7;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+  .nav-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:22px;color:#D4457E;}
+  .nav-logo span{color:#3D1A2E;}
+  .nav-links{display:flex;gap:24px;}
+  .nav-links a{font-size:13.5px;font-weight:700;color:#8C5070;text-decoration:none;letter-spacing:0.04em;}
+  .nav-links a:hover{color:#D4457E;}
+  .hero{background:linear-gradient(135deg,#FFF0F5 60%,#F5EEFF 100%);padding:64px 48px 52px;text-align:center;position:relative;overflow:hidden;}
+  .hero-badge{display:inline-flex;align-items:center;gap:7px;background:#FFD6E8;border:1.5px solid #F4A8C7;border-radius:100px;padding:5px 18px;font-size:11.5px;font-weight:700;letter-spacing:0.07em;color:#B5547A;text-transform:uppercase;margin-bottom:20px;}
+  .hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:52px;line-height:1.05;color:#3D1A2E;margin-bottom:10px;}
+  .hero h1 em{color:#D4457E;font-style:italic;}
+  .hero p{font-size:16px;color:#8C5070;font-weight:600;max-width:480px;margin:0 auto 32px;line-height:1.7;}
+  .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{background:#D4457E;color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;display:inline-block;}
+  .btn-outline{background:#fff;color:#D4457E;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:100px;border:2px solid #D4457E;cursor:pointer;text-decoration:none;display:inline-block;}
+  .blob{position:absolute;border-radius:50%;opacity:0.13;}
+  .services{padding:56px 32px;background:#fff;}
+  .section-title{font-family:'Playfair Display',serif;font-weight:900;font-size:32px;color:#3D1A2E;text-align:center;margin-bottom:6px;}
+  .section-sub{text-align:center;color:#8C5070;font-size:15px;font-weight:600;margin-bottom:36px;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:960px;margin:0 auto;}
+  .scard{border-radius:20px;padding:26px 22px 20px;border:1.5px solid;position:relative;}
+  .scard-pink{background:#FFF0F7;border-color:#F4B8D4;}
+  .scard-lilac{background:#F5F0FF;border-color:#D4B8F4;}
+  .scard-mint{background:#F0FFF8;border-color:#A8E6CE;}
+  .scard-peach{background:#FFF4F0;border-color:#F4C8B8;}
+  .scard-sky{background:#F0F6FF;border-color:#B8D4F4;}
+  .scard i{font-size:28px;margin-bottom:12px;display:block;}
+  .scard-pink i{color:#D4457E;}
+  .scard-lilac i{color:#7040B5;}
+  .scard-mint i{color:#30896A;}
+  .scard-peach i{color:#B56040;}
+  .scard-sky i{color:#2060B5;}
+  .scard-title{font-family:'Playfair Display',serif;font-weight:700;font-size:16px;margin-bottom:7px;}
+  .pink-title{color:#B5406E;}
+  .lilac-title{color:#7040B5;}
+  .mint-title{color:#30896A;}
+  .peach-title{color:#B56040;}
+  .sky-title{color:#2060B5;}
+  .scard-desc{font-size:13px;color:#7A5068;line-height:1.6;font-weight:400;}
+  .about{background:#FFF0F5;padding:56px 32px;display:flex;gap:40px;align-items:center;justify-content:center;flex-wrap:wrap;}
+  .about-avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#F4A8C7,#D4B8F4);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:#fff;flex-shrink:0;}
+  .about-text{max-width:440px;}
+  .about-text h2{font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:#3D1A2E;margin-bottom:10px;}
+  .about-text p{font-size:14.5px;color:#8C5070;line-height:1.7;font-weight:600;}
+  .contact{background:#fff;padding:56px 32px;text-align:center;}
+  .contact-card{background:#FFD6E8;border:1.5px solid #F4A8C7;border-radius:24px;padding:36px 40px;max-width:500px;margin:0 auto;}
+  .contact-card h3{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#3D1A2E;margin-bottom:8px;}
+  .contact-card p{font-size:14px;color:#B5547A;font-weight:600;margin-bottom:28px;}
+  .contact-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .wa-btn{background:#25D366;color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:13px 26px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+  .call-btn{background:#D4457E;color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:14px;padding:13px 26px;border-radius:100px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+  footer{background:#3D1A2E;color:#F4A8C7;text-align:center;padding:20px 32px;font-size:12.5px;font-weight:600;letter-spacing:0.06em;}
+</style>
+
+<nav>
+  <div class="nav-logo">Maphisa <span>ICT</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="blob" style="width:260px;height:260px;background:#FFB6D9;top:-80px;right:-60px;"></div>
+  <div class="blob" style="width:180px;height:180px;background:#C4A0F0;bottom:-40px;left:-40px;"></div>
+  <div class="hero-badge">&#x2665; Professional ICT Services &#x2665;</div>
+  <h1>Your Tech Bestie<br>is <em>Here for You.</em></h1>
+  <svg viewBox="0 0 120 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:120px;height:10px;display:block;margin:0 auto 18px;">
+    <path d="M0 5 Q10 0 20 5 Q30 10 40 5 Q50 0 60 5 Q70 10 80 5 Q90 0 100 5 Q110 10 120 5" stroke="#E8719A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </svg>
+  <p>Reliable, friendly software & digital support so you can focus on what you do best — being amazing.</p>
+  <div class="hero-btns">
+    <a href="#services" class="btn-primary">View Services</a>
+    <a href="https://wa.me/27837247526" class="btn-outline">WhatsApp Me</a>
+  </div>
+</div>
+
+<div class="services" id="services">
+  <h2 class="section-title">What I Offer</h2>
+  <p class="section-sub">Everything software — nothing you don't need.</p>
+  <div class="cards">
+    <div class="scard scard-pink">
+      <i class="ti ti-headset" aria-hidden="true"></i>
+      <div class="scard-title pink-title">ICT Support</div>
+      <div class="scard-desc">Software troubleshooting, system diagnostics, and technical assistance — fast and friendly.</div>
+    </div>
+    <div class="scard scard-lilac">
+      <i class="ti ti-brand-office" aria-hidden="true"></i>
+      <div class="scard-title lilac-title">Office Installation</div>
+      <div class="scard-desc">Microsoft 365, Office suites & productivity apps installed, licensed, and configured for you.</div>
+    </div>
+    <div class="scard scard-mint">
+      <i class="ti ti-world-www" aria-hidden="true"></i>
+      <div class="scard-title mint-title">Website Development</div>
+      <div class="scard-desc">Beautiful, functional websites designed and built to make your brand shine online.</div>
+    </div>
+    <div class="scard scard-peach">
+      <i class="ti ti-shield-lock" aria-hidden="true"></i>
+      <div class="scard-title peach-title">Network & Security</div>
+      <div class="scard-desc">Wi-Fi setup, antivirus, firewalls and network monitoring to keep everything safe & smooth.</div>
+    </div>
+    <div class="scard scard-sky">
+      <i class="ti ti-settings" aria-hidden="true"></i>
+      <div class="scard-title sky-title">System Maintenance</div>
+      <div class="scard-desc">Regular updates, performance tuning, backups & preventative care so things never go wrong.</div>
+    </div>
+  </div>
+</div>
+
+<div class="about" id="about">
+  <div class="about-avatar">M</div>
+  <div class="about-text">
+    <h2>Hi, I'm Maphisa!</h2>
+    <p>I'm a passionate tech professional dedicated to making software and digital tools work seamlessly for you. Whether it's fixing a software issue, building your dream website, or keeping your network safe — I've got you covered with care, skill, and a smile. &#x1F338;</p>
+  </div>
+</div>
+
+<div class="contact" id="contact">
+  <div class="contact-card">
+    <h3>Let's Work Together &#x1F495;</h3>
+    <p>Reach out via WhatsApp or give me a call — I'd love to hear from you!</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/27837247526" class="wa-btn">
+        <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp Me
+      </a>
+      <a href="tel:+27837247526" class="call-btn">
+        <i class="ti ti-phone" aria-hidden="true"></i> Call Me
+      </a>
+    </div>
+    <p style="margin-top:16px;font-size:13px;color:#B5547A;font-weight:700;">083 724 7526</p>
+  </div>
+</div>
+
+<footer>
+  Made with &#x2665; by Maphisa &nbsp;|&nbsp; Trusted ICT Support &nbsp;|&nbsp; &copy; 2026
+</footer>
